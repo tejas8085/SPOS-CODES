@@ -8,12 +8,12 @@ System.out.println ("enter no of process:");
 int n= sc.nextInt();
 int pid[] = new int[n]; 
 int at[] = new int[n]; 
-int bt[] = new int[n]; 
+int bt[] = new int[n];
 int ct[] = new int[n]; 
 int ta[] = new int[n];
 int wt[] = new int[n];  
 int f[] = new int[n];  
-int k[]= new int[n];  
+int k[]= new int[n];   
     int i, st=0, tot=0;
     float avgwt=0, avgta=0;
  

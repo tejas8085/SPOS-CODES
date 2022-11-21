@@ -15,6 +15,7 @@ class OPTIMAL {
                 if (p[i] == pf[k]) {
                     break loop;
                 }
+            }
 
         }
         int max = count[0];
@@ -49,7 +50,8 @@ class OPTIMAL {
             System.out.println();
             System.out.println("More than 1 used pages not required for furthur operation.\nSwapping LRU  page.");
             pos = check2(p, pf, count, j, s);
-        } else {
+        } 
+        else {
             int max = count[0];
             pos = 0;
             for (int l = 0; l < s; ++l) {

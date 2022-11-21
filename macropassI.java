@@ -9,12 +9,12 @@ public class macropassI{
 
     public static void main(String[] args) throws IOException{
         BufferedReader br=new BufferedReader(new FileReader("C:\\Users\\Mahesh Chaudhari\\Desktop\\inputmacro.txt"));
-//        
-        FileWriter mnt=new FileWriter("C:\\Users\\Dell\\Desktop\\LP A3\\mnt.txt");
-        FileWriter mdt=new FileWriter("C:\\Users\\Dell\\Desktop\\LP A3\\mdt.txt");
-        FileWriter kpdt=new FileWriter("C:\\Users\\Dell\\Desktop\\LP A3\\kpdt.txt");
-        FileWriter pnt=new FileWriter("C:\\Users\\Dell\\Desktop\\LP A3\\pntab.txt");
-        FileWriter ir=new FileWriter("C:\\Users\\Dell\\Desktop\\LP A3\\intermediate.txt");
+       
+        FileWriter mnt=new FileWriter("C:\\Users\\Mahesh Chaudhari\\Desktop\\mnt.txt");
+        FileWriter mdt=new FileWriter("C:\\Users\\Mahesh Chaudhari\\Desktop\\mdt.txt");
+        FileWriter kpdt=new FileWriter("C:\\Users\\Mahesh Chaudhari\\Desktop\\kpdt.txt");
+        FileWriter pnt=new FileWriter("C:\\Users\\Mahesh Chaudhari\\Desktop\\pnt.txt");
+        FileWriter ir=new FileWriter("C:\\Users\\Mahesh Chaudhari\\Desktop\\ir.txt");
         LinkedHashMap<String, Integer> pntab=new LinkedHashMap<>();
         String line;
         String Macroname = null;
@@ -34,10 +34,10 @@ public class macropassI{
                     mnt.write(parts[0]+"\t"+pp+"\t"+kp+"\t"+mdtp+"\t"+(kp==0?kpdtp:(kpdtp+1))+"\n");
                     continue;
                 }
-                for(int i=1;i<parts.length;i++) //processing of parameters
+                for(int i=1;i<parts.length;i++) 
                 {
                     parts[i]=parts[i].replaceAll("[&,]", "");
-                    //System.out.println(parts[i]);
+                    
                     if(parts[i].contains("="))
                     {
                         ++kp;
@@ -60,7 +60,7 @@ public class macropassI{
                 }
                 mnt.write(parts[0]+"\t"+pp+"\t"+kp+"\t"+mdtp+"\t"+(kp==0?kpdtp:(kpdtp+1))+"\n");
                 kpdtp=kpdtp+kp;
-                //System.out.println("KP="+kp);
+                
                 
                 
             }
